@@ -1,0 +1,25 @@
+git rm --cached {filenaem} : remove
+git init : inital repo
+git add {filename}: to add\
+git status
+git commit -m (-m message) : to add commit
+
+login:
+git config --global user.email "{email}"
+git config --global user.name "{Your Name}"
+
+git log
+/*
+Local: Master
+on github: Origin /master
+*/
+git remote
+git remote -v: O/P => return add/set url
+git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] 
+[--mirror=<fetch|push>] <name> <url> 
+git remote add [<options>] <name> <url> : fuddu
+ git remote add origin/varible https://github.com/harmeetsran01/javascriptpractice.git       
+ git remote add harmeet https://github.com/harmeetsran01/javascriptpractice.git
+
+ pull: fetch + merge
+ fetch: fetch, merge manually
