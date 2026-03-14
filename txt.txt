@@ -23,3 +23,7 @@ git remote add [<options>] <name> <url> : fuddu
 
  pull: fetch + merge
  fetch: fetch, merge manually
+
+ git push - > branch/url/varible -> branch{github}
+
+ git log --oneline: return with commit ID last history/compact history
