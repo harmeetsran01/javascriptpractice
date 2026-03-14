@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Press a Key...</h1>
+    <h2 id="key"></h2>
+</body>
+<script>
+    window.addEventListener('keydown',(e)=>{
+        document.getElementById('key').innerHTML = `Press Key: ${e.key} <br>
+        Code: ${e.code} <br>
+        Keycode: ${e.keyCode} 
+        `
+    })
+</script>
+</html>

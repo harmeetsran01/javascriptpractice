@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code Code Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Handler means: function wihtout name/ giving reference. A specialized component or object that handles events.Often managed by an event loop or queue. A HttpHandler in ASP.NET receives a request and returns a response.
+    // Meet = ()=>{console.log("Heyworld")}
+    // Meet is handler here which is storing func here
+    // If i write Meet() this means i am executing a func not reference/Handle
+    // CB: writing function to do action. A function passed as an argument to another function, intended to be executed after a task completes (e.g., doSomething(callback)).
+
+    setTimeout(()=>{
+        console.log("Hello");
+        
+    },1500)
+
+    setTimeout(()=>
+        console.log("Bundi")        
+    ,1500)
+
+    let Meet = ()=>console.log("Hello Meet!");    
+    // setInterval(Meet,1600)
+    // setTimeout(()=>{console.log("Hello Harmeeet")
+    // },2000)
+    let changetxt = ()=>{document.querySelector('h1').innerHTML = "Code change through async"}
+    let changingtxt = setTimeout(changetxt,5000)
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(changingtxt); //will clear changingtxt from queue
+        console.log("Clear Timeout Done!");
+        
+    })
+</script>
+</html>

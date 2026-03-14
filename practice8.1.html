@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Another Code Code Code</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>    
+   
+    document.querySelector('#start').addEventListener('click',()=>{
+        document.querySelector('h1').innerHTML = "See Console"
+        Time = setInterval(
+            (str)=>{
+                console.log(str,new Date().toLocaleTimeString())
+                    },1000,"String here will be a argument, passed on CB of first parameter of setInternal str")        
+    })
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(Time) //will clear time from queue
+        console.log("Clear Timeout Done!");        
+    })
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="htmlbody" style = "background-color: black; color: white;">
+    <div class="bg-dark">
+        <button onclick="darktheme()" id="btn">Button</button>
+        <h1 class="heading">My Website</h1>
+        <h1 class="heading">My Website 1</h1>
+        <h1 class="heading">My Website 2</h1>
+        <p class="paragraph">Hello</p>
+    </div>
+</body>
+</html>
+<script>
+/*
+.innertext gives you the output for showing text
+.textcontent gives you the actual existing text even it is in hidden form
+.innerhtml gives you text with inner elements values such as span h1 etc
+queryselector provides you the first element of the class or id or tag you have given
+queryselectorall provides you all the elements of the class or id or tag you have given in the form of array
+css selector
+queryselector for 'input[type="password"]'
+queryselector for 'p:first-child' as css
+let parent = queryselector('.parent')
+ parent.firstelementchild and same for lastelementchild
+ parent.parentelement, parent.nextelementSibling
+ parent.childnodes important! complex tree structure like Nodelist and it's properties
+        text, div, text etc 
+parent.appendchild(name) to add existing elements or data to a container
+parent.children O/P-> one parent element and other HTMLCollection of children 
+
+to make a return value to an array:  array.from(name)
+
+*/
+
+
+    let temp = 1;
+function textchange(){
+    if (temp == 1){
+    document.getElementsByClassName("heading")[0].innerHTML = "Now This is changed";
+    console.log(document.getElementById("btn").getAttribute("id"));
+    document.getElementById("btn").setAttribute("id", "btn2"); //Always overwrties the id of the button to btn2
+temp = 0;}
+
+else{
+document.getElementsByClassName("heading")[0].innerHTML = "My Website";   
+temp = 1;} 
+}
+
+function darktheme(){
+    if (temp == 1){
+document.getElementById("htmlbody").style.backgroundColor = "white";
+document.getElementById("htmlbody").style.color = "black";
+    document.getElementById("btn").innerHTML = "Change to Dark Theme";
+
+temp = 0;
+}
+else{
+    document.getElementById("htmlbody").style.backgroundColor = "black";
+    document.getElementById("htmlbody").style.color = "white";
+    document.getElementById("btn").innerHTML = "Change to Light Theme";
+
+temp = 1;} 
+}
+</script>

@@ -1,0 +1,31 @@
+<!-- This is HTTPS Request Handling usign XML  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+</body>
+<script>
+    const XML = new XMLHttpRequest();
+    XML.open('GET','https://api.github.com/users/harmeetsran01')
+    XML.onreadystatechange = () => {
+        if (XML.readyState == 4){
+            console.log(this);            
+        console.log(XML.readyState);
+        let temp = JSON.parse(XML.response)
+        console.log(temp);        
+        for (let element in temp){
+            document.querySelector("#head").innerHTML += element + ":" + temp[element] + "<br>"
+        }
+    }}
+    
+    console.log("Before send()");
+    XML.send();
+    console.log("After send()");   
+
+</script>
+</html>
