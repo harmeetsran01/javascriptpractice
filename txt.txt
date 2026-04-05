@@ -27,3 +27,13 @@ git remote add [<options>] <name> <url> : fuddu
  git push - > branch/url/varible -> branch{github}
 
  git log --oneline: return with commit ID last history/compact history
+
+ revert:push and merge in github ,undo
+ reset ,
+    hard reset: ::before push, delete commit and undo changes
+    mix reset: ::before push, delete commit and keep the changes in untracked file
+    {unstaged} ->  git reset --mixed HEAD~1  
+    soft reset: ::before push, delete commit and keep changes in staged
+
+
+    
